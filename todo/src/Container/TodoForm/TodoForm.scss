@@ -1,0 +1,60 @@
+// Intializing mixins for the TodoForm component
+@mixin sizeContainer ($height,$width) {
+    min-height: $height;
+    width: $width;
+}
+
+@mixin fontFamily ($weight, $size, $color) {
+    font-family: 'Bitter', serif;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+// Adding a background container to the form
+.todo-form{
+    margin-top: 25px;
+    margin-left: 20px;
+    border-radius: 10px;
+    @include sizeContainer(600px, 700px);
+    background-color: #e6e4df;
+    font-family: 'Bitter', serif;
+    font-weight: 300;
+    color: #18525F;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+// Adding style to the labels for each input
+.todoLabel{
+    @include fontFamily (400, 20px, #18525F);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+// Adding style to the input fields
+.todoInput{
+    @include sizeContainer(35px, 300px);
+    @include fontFamily (300, 15px, #18525F);
+    border-radius: 5px;
+    border: 5px;
+    margin-bottom: 30px;
+    
+}
+
+// Adding style to the submit button
+.btn-saveTodo {
+    @include sizeContainer(50px, 300px);
+    @include fontFamily(600,19px , #18525F);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 5px grey;
+    &:hover{
+        cursor: pointer;
+    }
+}

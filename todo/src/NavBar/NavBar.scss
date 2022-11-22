@@ -1,0 +1,19 @@
+// NavBar SCSS has been added here with nesting
+.nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #e6e4df; 
+    display: inline-block;
+    text-align: center;
+    h2{
+        font-family: 'Bitter', serif;
+        font-weight: 300;
+        color: #18525F;
+        display: inline-block;
+    }
+    
+}
+

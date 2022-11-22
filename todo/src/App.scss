@@ -1,0 +1,26 @@
+// Styling the button to add the tasks in the form
+.btn-addShowForm{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 100px;
+    box-shadow: 5px 5px 5px grey;
+    font-family: 'Bitter', serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: #18525F;
+    margin-left: 20px;
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+// Styling the mainContainer
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

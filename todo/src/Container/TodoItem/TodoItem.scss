@@ -1,0 +1,81 @@
+// Intializing mixins for the TodoForm component
+@mixin sizeContainer ($height,$width) {
+    min-height: $height;
+    width: $width;
+}
+
+@mixin fontFamily ($weight, $size, $color) {
+    font-family: 'Bitter', serif;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+.item{
+    width: 650px;
+    margin: 20px;
+    padding: 20px 5px;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.25);
+}
+
+// Styling the details tab
+.details{
+    background-color: #ffffff;
+    height: 120px;
+    width: 650px;
+    display: inline-block;
+}
+
+// Styling the button list to show in one line
+.buttons-list{
+    display: flex;
+    flex-direction: row;
+     gap: 10px;
+     float: right;
+     margin-right: 10px;
+     align-items: center;
+ }
+
+// Using simple selectors
+.items p{
+    font-family: 'Bitter', serif;
+    font-weight: 300;
+    color: #18525F;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    align-self: self-start;
+}
+
+// Using class nesting and simple selectors
+.completed span{
+    text-decoration: line-through;
+    color: #000000;
+}
+
+// Styling the checkbox
+.task-checkbox{
+    @include sizeContainer(15px, 15px);
+}
+ 
+ // Using mixin and varianle for the button
+ .btn-style{
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     background-color: #e6e4df ;
+     border: none;
+     @include sizeContainer(30px, 100px);
+     @include fontFamily(300, 15px, #18525F);
+     border-radius: 3px;
+     opacity: 1;
+
+     &:hover{
+        background-color: #B8B8B8;
+        color: #000000;
+     }
+ }
+ 
